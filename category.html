@@ -61,7 +61,18 @@
       <div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4">
 
 
+          <div class="cell" style="padding: 0 20px 0 20px">
+              <img class="thumbnail" id="tomato" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/tomato.jpg">
+              <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Tomato</h5>
+              <script>
+              $(document).ready(function(){
+                  $("#tomato").click(function(){
+                      alert("Tomato\nQuantity:\t7\nPrice:\t\t0.75/item\nCategory:\tFruit");
+                  });
+              });
+          </script>
 
+          </div>
 
         <div class="cell" style="padding: 0 20px 0 20px">
             <img class="thumbnail" id="apple" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/apple.jpg">
@@ -73,6 +84,43 @@
             $(document).ready(function(){
                 $("#apple").click(function(){
                     alert("Apple\nQuantity:\t3\nPrice:\t\t0.50/item\nCategory:\tFruit");
+                });
+            });
+        </script>
+        </div>
+
+
+                <div class="cell" style="padding: 0 20px 0 20px">
+                    <img class="thumbnail" id="strawberry" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/strawberry.jpg">
+                    <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Strawberry</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#strawberry").click(function(){
+                            alert("Strawberry\nQuantity:\t5\nPrice:\t\t5.00/lb\nCategory:\tFruit");
+                        });
+                    });
+                </script>
+                </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+           <img class="thumbnail" id="grape" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/grape.jpg">
+           <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Grape</h5>
+           <script>
+           $(document).ready(function(){
+               $("#grape").click(function(){
+                   alert("Grape\nQuantity:\t2\nPrice:\t\t1.00/lb\nCategory:\tFruit");
+               });
+           });
+       </script>
+       </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="orange" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/orange.jpeg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Orange</h5>
+            <script>
+            $(document).ready(function(){
+                $("#orange").click(function(){
+                    alert("Orange\nQuantity:\t10\nPrice:\t\t0.60/lb\nCategory:\tFruit");
                 });
             });
         </script>
@@ -91,16 +139,17 @@
         </div>
 
         <div class="cell" style="padding: 0 20px 0 20px">
-            <img class="thumbnail" id="carrot" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/carrot.jpg">
-            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Carrot</h5>
+            <img class="thumbnail" id="lettuce" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/lettuce.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Lettuce</h5>
             <script>
             $(document).ready(function(){
-                $("#carrot").click(function(){
-                    alert("Carrot\nQuantity:\t4\nPrice:\t\t1.00/bunch\nCategory:\tVegetable");
+                $("#lettuce").click(function(){
+                    alert("Lettuce\nQuantity:\t8\nPrice:\t\t0.98/head\nCategory:\tVegetable");
                 });
             });
         </script>
         </div>
+
 
         <div class="cell" style="padding: 0 20px 0 20px">
             <img class="thumbnail" id="corn" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/corn.jpg">
@@ -114,29 +163,20 @@
         </script>
         </div>
 
-         <div class="cell" style="padding: 0 20px 0 20px">
-            <img class="thumbnail" id="grape" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/grape.jpg">
-            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Grape</h5>
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="carrot" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/carrot.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Carrot</h5>
             <script>
             $(document).ready(function(){
-                $("#grape").click(function(){
-                    alert("Grape\nQuantity:\t2\nPrice:\t\t1.00/lb\nCategory:\tFruit");
+                $("#carrot").click(function(){
+                    alert("Carrot\nQuantity:\t4\nPrice:\t\t1.00/bunch\nCategory:\tVegetable");
                 });
             });
         </script>
         </div>
 
-        <div class="cell" style="padding: 0 20px 0 20px">
-            <img class="thumbnail" id="lettuce" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/lettuce.jpg">
-            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Lettuce</h5>
-            <script>
-            $(document).ready(function(){
-                $("#lettuce").click(function(){
-                    alert("Lettuce\nQuantity:\t8\nPrice:\t\t0.98/head\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
+
+
 
         <div class="cell" style="padding: 0 20px 0 20px">
             <img class="thumbnail" id="onion" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/onion.jpg">
@@ -150,29 +190,9 @@
         </script>
         </div>
 
-        <div class="cell" style="padding: 0 20px 0 20px">
-            <img class="thumbnail" id="orange" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/orange.jpeg">
-            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Orange</h5>
-            <script>
-            $(document).ready(function(){
-                $("#orange").click(function(){
-                    alert("Orange\nQuantity:\t10\nPrice:\t\t0.60/lb\nCategory:\tFruit");
-                });
-            });
-        </script>
-        </div>
 
-        <div class="cell" style="padding: 0 20px 0 20px">
-            <img class="thumbnail" id="potato" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/potato.jpg">
-            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Potato</h5>
-            <script>
-            $(document).ready(function(){
-                $("#potato").click(function(){
-                    alert("Potato\nQuantity:\t5\nPrice:\t\t0.25/lb\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
+
+
 
         <div class="cell" style="padding: 0 20px 0 20px">
             <img class="thumbnail" id="spinach" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/spinach.jpg">
@@ -186,30 +206,21 @@
         </script>
         </div>
 
+
+
+
         <div class="cell" style="padding: 0 20px 0 20px">
-            <img class="thumbnail" id="strawberry" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/strawberry.jpg">
-            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Strawberry</h5>
+            <img class="thumbnail" id="potato" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/potato.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Potato</h5>
             <script>
             $(document).ready(function(){
-                $("#strawberry").click(function(){
-                    alert("Strawberry\nQuantity:\t5\nPrice:\t\t5.00/lb\nCategory:\tFruit");
+                $("#potato").click(function(){
+                    alert("Potato\nQuantity:\t5\nPrice:\t\t0.25/lb\nCategory:\tVegetable");
                 });
             });
         </script>
         </div>
 
-        <div class="cell" style="padding: 0 20px 0 20px">
-            <img class="thumbnail" id="tomato" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/tomato.jpg">
-            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Tomato</h5>
-            <script>
-            $(document).ready(function(){
-                $("#tomato").click(function(){
-                    alert("Tomato\nQuantity:\t7\nPrice:\t\t0.75/item\nCategory:\tFruit");
-                });
-            });
-        </script>
-
-        </div>
       </div>
       <hr>
     </article>
