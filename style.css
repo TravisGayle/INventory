@@ -45,3 +45,45 @@
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
 }
+
+.cell {
+    padding: 0 20px 0 20px
+}
+
+.cell img {
+    width: 200px;
+    height: 200px;
+    margin: 5px 0 0 0;
+}
+
+.cell h5 {
+    width: 200px;
+    font-family: 'Quicksand'sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header {
+    height:120px;
+}
+
+.header h1 {
+    font-family: 'Quicksand',sans-serif;
+    font-weight: 700;
+    font-size: 80px
+}
+
+.header-cellshrink {
+    width: 250px;
+    float: left;
+    overflow: hidden;
+}
+
+.header-cellshrink img {
+    width: 250px;
+    height: 250px;
+    margin: -35px 0 -105px 0;
+}
+
+
+
