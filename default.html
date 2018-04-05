@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmstand Inventory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta class="foundation-mq">
+
+  </head>
+  <body>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-2195009-2', 'auto');
+        ga('send', 'pageview');
+
+        ga('create', 'UA-2195009-27', 'auto', {name: "foundation"});
+        ga('foundation.send', 'pageview');
+    </script>
+    <div class="js-off-canvas-overlay is-overlay-fixed"></div>
+    <div class="off-canvas-content" data-off-canvas-content="">
+      <div class="title-bar hide-for-large">
+        <div class="title-bar-left">
+          <button class="menu-icon" type="button" data-toggle="my-info" aria-expanded="false" aria-controls="my-info"></button>
+          <span class="title-bar-title">Mike Mikerson</span>
+        </div>
+      </div>
+    <div class="callout primary">
+      <article class="grid-container">
+        <div style="height:120px;" class="">
+          <div style="width:250px;float:left;overflow: hidden;" class="cell shrink">
+            <img style="width:250px;height:250px;margin: -35px 0 -105px 0;" src="https://wonderwe-prod.s3.amazonaws.com/profile/86877068-ff9b-4f2d-b093-47233bbd0769-goodshepherd-size200x200.png">
+          </div>
+          <h1 style="font-family:'Quicksand',sans-serif;font-weight:700;font-size:80px">Farmstand Inventory</h1>
+        </div>
+      </article>
+    </div>
+    <article class="grid-container">
+
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn">Sort</button>
+            <div class="dropdown-content" style="left:0;">
+                <a href="./template.html">Alphabetic Order</a>
+                <a href="./category.html">Category</a>
+                <a href="./default.html">Default</a>
+            </div>
+        </div>
+
+      <div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4">
+
+
+
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="apple" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/apple.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Apple</h5>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+            <script>
+            $(document).ready(function(){
+                $("#apple").click(function(){
+                    alert("Apple\nQuantity:\t3\nPrice:\t\t0.50/item\nCategory:\tFruit");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img  class="thumbnail" id="broccoli" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/broccoli.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Broccoli</h5>
+            <script>
+            $(document).ready(function(){
+                $("#broccoli").click(function(){
+                    alert("Broccoli\nQuantity:\t6\nPrice:\t\t0.83/bushel\nCategory:\tVegetable");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="carrot" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/carrot.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Carrot</h5>
+            <script>
+            $(document).ready(function(){
+                $("#carrot").click(function(){
+                    alert("Carrot\nQuantity:\t4\nPrice:\t\t1.00/bunch\nCategory:\tVegetable");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="corn" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/corn.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Corn</h5>
+            <script>
+            $(document).ready(function(){
+                $("#corn").click(function(){
+                    alert("Corn\nQuantity:\t3\nPrice:\t\t0.65/husk\nCategory:\tVegetable");
+                });
+            });
+        </script>
+        </div>
+
+         <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="grape" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/grape.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Grape</h5>
+            <script>
+            $(document).ready(function(){
+                $("#grape").click(function(){
+                    alert("Grape\nQuantity:\t2\nPrice:\t\t1.00/lb\nCategory:\tFruit");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="lettuce" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/lettuce.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Lettuce</h5>
+            <script>
+            $(document).ready(function(){
+                $("#lettuce").click(function(){
+                    alert("Lettuce\nQuantity:\t8\nPrice:\t\t0.98/head\nCategory:\tVegetable");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="onion" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/onion.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Onion</h5>
+            <script>
+            $(document).ready(function(){
+                $("#onion").click(function(){
+                    alert("Onion\nQuantity:\t3\nPrice:\t\t0.99/item\nCategory:\tVegetable");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="orange" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/orange.jpeg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Orange</h5>
+            <script>
+            $(document).ready(function(){
+                $("#orange").click(function(){
+                    alert("Orange\nQuantity:\t10\nPrice:\t\t0.60/lb\nCategory:\tFruit");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="potato" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/potato.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Potato</h5>
+            <script>
+            $(document).ready(function(){
+                $("#potato").click(function(){
+                    alert("Potato\nQuantity:\t5\nPrice:\t\t0.25/lb\nCategory:\tVegetable");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="spinach" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/spinach.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Spinach</h5>
+            <script>
+            $(document).ready(function(){
+                $("#spinach").click(function(){
+                    alert("Spinach\nQuantity:\t4\nPrice:\t\t1.49/bunch\nCategory:\tVegetable");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="strawberry" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/strawberry.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Strawberry</h5>
+            <script>
+            $(document).ready(function(){
+                $("#strawberry").click(function(){
+                    alert("Strawberry\nQuantity:\t5\nPrice:\t\t5.00/lb\nCategory:\tFruit");
+                });
+            });
+        </script>
+        </div>
+
+        <div class="cell" style="padding: 0 20px 0 20px">
+            <img class="thumbnail" id="tomato" style="width:200px;height:200px;margin: 5px 0 0 0;" src="./Produce/tomato.jpg">
+            <h5 style="width:200px;font-family:'Quicksand',sans-serif;font-weight:500;text-align:center;">Tomato</h5>
+            <script>
+            $(document).ready(function(){
+                $("#tomato").click(function(){
+                    alert("Tomato\nQuantity:\t7\nPrice:\t\t0.75/item\nCategory:\tFruit");
+                });
+            });
+        </script>
+
+        </div>
+      </div>
+      <hr>
+    </article>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
+    <script>$(document).foundation();</script>
+  </body>
+</html>

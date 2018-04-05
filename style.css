@@ -73,6 +73,11 @@ Copy Text
     margin: 5px 0 0 0;
 }
 
+.cell img:hover{
+    transform: scale(1.05);
+    border: 1px solid #388e3c;  
+}
+
 .cell h5 {
     width: 15vw; //200px;
     font-family: 'Quicksand',sans-serif;
@@ -80,6 +85,11 @@ Copy Text
     text-align: center;
     color: #212121;
 }
+
+/* .cell h5:hover{
+    text-shadow: 1px 0 0 currentColor;
+    color: #388e3c;
+} */
 
 .header {
     height:120px;
