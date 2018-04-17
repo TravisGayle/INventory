@@ -63,22 +63,24 @@ Copy Text
     background-color: #3e8e41;
 }
 
-.cell {
+.produce_cell {
     padding: 0 20px 0 20px
 }
 
-.cell img {
+.produce_cell img {
     width: 15vw; //200px;
     height: 15vw;//200px;
-    margin: 5px 0 0 0;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 3px 0 0 0;
 }
 
-.cell img:hover{
+.produce_cell img:hover{
     transform: scale(1.05);
-    border: 1px solid #388e3c;  
+    border: 1px solid #388e3c;
 }
 
-.cell h5 {
+.produce_cell h5 {
     width: 15vw; //200px;
     font-family: 'Quicksand',sans-serif;
     font-weight: 500;
@@ -86,13 +88,14 @@ Copy Text
     color: #212121;
 }
 
-/* .cell h5:hover{
+/* .produce_cell h5:hover{
     text-shadow: 1px 0 0 currentColor;
     color: #388e3c;
 } */
 
 .header {
     height:120px;
+    /* width: 150%; */
 }
 
 .header h1 {
@@ -100,13 +103,16 @@ Copy Text
     font-weight: 700;
     font-size: 7vw;
     color: white;
+    text-align: center;
 }
 @media screen and (min-width: 1200px){
     .header h1 {
         font-size: 75px;
     }
 }
-
+.grid{
+    width: 100%;
+}
 .cellshrink {
     width: 15vw; //250px;
     float: left;
@@ -114,7 +120,7 @@ Copy Text
 }
 
 .cellshrink img {
-    width: 15vw;//250px;
-    height: 15vw;//250px;
+    /* width: 15vw;//250px;
+    height: 15vw;//250px; */
     margin: -1vw 0 -6.5vw 0; //-35px 0 -105px 0;
 }
