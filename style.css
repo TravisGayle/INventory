@@ -21,7 +21,7 @@ Copy Text
     border: none;
     cursor: pointer;
     box-shadow: 8px 8px 20px -10px rgba(0,0,0,0.5);
-
+margin-right: 100px;
 }
 
 .dropbtn a{
