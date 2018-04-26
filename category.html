@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="" lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farmstand Inventory</title>
@@ -10,44 +10,47 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta class="foundation-mq">
 
-  </head>
-  <body>
+</head>
+<body>
     <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-2195009-2', 'auto');
-        ga('send', 'pageview');
+    ga('create', 'UA-2195009-2', 'auto');
+    ga('send', 'pageview');
 
-        ga('create', 'UA-2195009-27', 'auto', {name: "foundation"});
-        ga('foundation.send', 'pageview');
+    ga('create', 'UA-2195009-27', 'auto', {name: "foundation"});
+    ga('foundation.send', 'pageview');
     </script>
     <div class="js-off-canvas-overlay is-overlay-fixed"></div>
     <div class="off-canvas-content" data-off-canvas-content="">
-      <div class="title-bar hide-for-large">
-        <div class="title-bar-left">
-          <button class="menu-icon" type="button" data-toggle="my-info" aria-expanded="false" aria-controls="my-info"></button>
-          <span class="title-bar-title">Mike Mikerson</span>
+        <div class="title-bar hide-for-large">
+            <div class="title-bar-left">
+                <button class="menu-icon" type="button" data-toggle="my-info" aria-expanded="false" aria-controls="my-info"></button>
+                <!-- <span class="title-bar-title">Mike Mikerson</span> -->
+            </div>
         </div>
-      </div>
-    <div class="callout primary">
-      <article class="grid-container">
-        <div class="header">
-          <div class="cellshrink">
-            <img src="https://wonderwe-prod.s3.amazonaws.com/profile/86877068-ff9b-4f2d-b093-47233bbd0769-goodshepherd-size200x200.png">
-          </div>
-          <h1>Farmstand Inventory</h1>
+        <div class="callout primary">
+            <article class="grid-container">
+                <div class="header">
+                    <div class="cellshrink">
+                        <img src="https://wonderwe-prod.s3.amazonaws.com/profile/86877068-ff9b-4f2d-b093-47233bbd0769-goodshepherd-size200x200.png">
+                    </div>
+                    <h1>Farmstand Inventory</h1>
+                </div>
+            </article>
         </div>
-      </article>
-    </div>
-    <article class="grid-container">
 
         <div class="dropdown" style="float:right;">
             <button class="dropbtn">Sort</button>
@@ -58,39 +61,187 @@
             </div>
         </div>
 
-      <div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4">
+        <article class="grid-container">
 
 
-          <div class="cell">
-              <img class="thumbnail" id="tomato" src="./Produce/tomato.jpg">
-              <h5>Tomato</h5>
-              <script>
-              $(document).ready(function(){
-                  $("#tomato").click(function(){
-                      alert("Tomato\nQuantity:\t7\nPrice:\t\t0.75/item\nCategory:\tFruit");
-                  });
-              });
-          </script>
 
-          </div>
-
-        <div class="cell">
-            <img class="thumbnail" id="apple" src="./Produce/apple.jpg">
-            <h5>Apple</h5>
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-            <script>
-            $(document).ready(function(){
-                $("#apple").click(function(){
-                    alert("Apple\nQuantity:\t3\nPrice:\t\t0.50/item\nCategory:\tFruit");
-                });
-            });
-        </script>
-        </div>
+            <div class="grid-x grid-margin-x small-up-2 medium-up-3 large-up-4">
 
 
-                <div class="cell">
+                <div class="modal fade" id="myModalApple" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h5 class="modal-title" id="exampleModalLabel1">Apple</h5>
+                                <!-- <img class="thumbnail" id="apple" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModal"> -->
+
+                            </div>
+                            <div class="modal-body">
+                                <b>Quantity:    </b><p contenteditable="true">10</p>
+                                <b>Price:      </b><p contenteditable="true">0.53/lb</p>
+                                <b>Category:   </b><p contenteditable="true">Fruit</p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="apple" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModalApple">
+                    <h5>Apple</h5>
+                </div>
+
+                <div class="modal fade" id="myModalBroccoli" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h5 class="modal-title" id="exampleModalLabel2">Broccoli</h5>
+                                <!-- <img class="thumbnail" id="apple" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModal"> -->
+
+                            </div>
+                            <div class="modal-body">
+                                <b>Quantity:    </b><p contenteditable="true">6</p>
+                                <b>Price:      </b><p contenteditable="true">0.83/bushel</p>
+                                <b>Category:   </b><p contenteditable="true">Vegetable</p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="broccoli" src="./Produce/carrot.jpg" data-toggle="modal" data-target="#myModalBroccoli">
+                    <h5>Broccoli</h5>
+                </div>
+
+                <div class="modal fade" id="myModalCarrot" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h5 class="modal-title" id="exampleModalLabel3">Carrot</h5>
+                                <!-- <img class="thumbnail" id="apple" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModal"> -->
+
+                            </div>
+                            <div class="modal-body">
+                                <b>Quantity:    </b><p contenteditable="true">4</p>
+                                <b>Price:      </b><p contenteditable="true">0.89/bunch</p>
+                                <b>Category:   </b><p contenteditable="true">Vegetable</p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="broccoli" src="./Produce/broccoli.jpg" data-toggle="modal" data-target="#myModalCarrot">
+                    <h5>Carrot</h5>
+                </div>
+
+
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="corn" src="./Produce/corn.jpg">
+                    <h5>Corn</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#corn").click(function(){
+                            alert("Corn\nQuantity:\t3\nPrice:\t\t0.65/husk\nCategory:\tVegetable");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="grape" src="./Produce/grape.jpg">
+                    <h5>Grape</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#grape").click(function(){
+                            alert("Grape\nQuantity:\t2\nPrice:\t\t1.00/lb\nCategory:\tFruit");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="lettuce" src="./Produce/lettuce.jpg">
+                    <h5>Lettuce</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#lettuce").click(function(){
+                            alert("Lettuce\nQuantity:\t8\nPrice:\t\t0.98/head\nCategory:\tVegetable");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="onion" src="./Produce/onion.jpg">
+                    <h5>Onion</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#onion").click(function(){
+                            alert("Onion\nQuantity:\t3\nPrice:\t\t0.99/item\nCategory:\tVegetable");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="orange" src="./Produce/orange.jpeg">
+                    <h5>Orange</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#orange").click(function(){
+                            alert("Orange\nQuantity:\t10\nPrice:\t\t0.60/lb\nCategory:\tFruit");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="potato" src="./Produce/potato.jpg">
+                    <h5>Potato</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#potato").click(function(){
+                            alert("Potato\nQuantity:\t5\nPrice:\t\t0.25/lb\nCategory:\tVegetable");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="spinach" src="./Produce/spinach.jpg">
+                    <h5>Spinach</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#spinach").click(function(){
+                            alert("Spinach\nQuantity:\t4\nPrice:\t\t1.49/bunch\nCategory:\tVegetable");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="produce_cell">
                     <img class="thumbnail" id="strawberry" src="./Produce/strawberry.jpg">
                     <h5>Strawberry</h5>
                     <script>
@@ -99,135 +250,75 @@
                             alert("Strawberry\nQuantity:\t5\nPrice:\t\t5.00/lb\nCategory:\tFruit");
                         });
                     });
-                </script>
+                    </script>
                 </div>
 
-        <div class="cell">
-           <img class="thumbnail" id="grape" src="./Produce/grape.jpg">
-           <h5>Grape</h5>
-           <script>
-           $(document).ready(function(){
-               $("#grape").click(function(){
-                   alert("Grape\nQuantity:\t2\nPrice:\t\t1.00/lb\nCategory:\tFruit");
-               });
-           });
-       </script>
-       </div>
+                <div class="produce_cell">
+                    <img class="thumbnail" id="tomato" src="./Produce/tomato.jpg">
+                    <h5>Tomato</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#tomato").click(function(){
+                            alert("Tomato\nQuantity:\t7\nPrice:\t\t0.75/item\nCategory:\tFruit");
+                        });
+                    });
+                    </script>
 
-        <div class="cell">
-            <img class="thumbnail" id="orange" src="./Produce/orange.jpeg">
-            <h5>Orange</h5>
-            <script>
-            $(document).ready(function(){
-                $("#orange").click(function(){
-                    alert("Orange\nQuantity:\t10\nPrice:\t\t0.60/lb\nCategory:\tFruit");
-                });
-            });
-        </script>
-        </div>
-
-        <div class="cell">
-            <img  class="thumbnail" id="broccoli" src="./Produce/broccoli.jpg">
-            <h5>Broccoli</h5>
-            <script>
-            $(document).ready(function(){
-                $("#broccoli").click(function(){
-                    alert("Broccoli\nQuantity:\t6\nPrice:\t\t0.83/bushel\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
-
-        <div class="cell">
-            <img class="thumbnail" id="lettuce" src="./Produce/lettuce.jpg">
-            <h5>Lettuce</h5>
-            <script>
-            $(document).ready(function(){
-                $("#lettuce").click(function(){
-                    alert("Lettuce\nQuantity:\t8\nPrice:\t\t0.98/head\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
-
-
-        <div class="cell">
-            <img class="thumbnail" id="corn" src="./Produce/corn.jpg">
-            <h5>Corn</h5>
-            <script>
-            $(document).ready(function(){
-                $("#corn").click(function(){
-                    alert("Corn\nQuantity:\t3\nPrice:\t\t0.65/husk\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
-
-        <div class="cell">
-            <img class="thumbnail" id="carrot" src="./Produce/carrot.jpg">
-            <h5>Carrot</h5>
-            <script>
-            $(document).ready(function(){
-                $("#carrot").click(function(){
-                    alert("Carrot\nQuantity:\t4\nPrice:\t\t1.00/bunch\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
-
-
-
-
-        <div class="cell">
-            <img class="thumbnail" id="onion" src="./Produce/onion.jpg">
-            <h5>Onion</h5>
-            <script>
-            $(document).ready(function(){
-                $("#onion").click(function(){
-                    alert("Onion\nQuantity:\t3\nPrice:\t\t0.99/item\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
-
-
-
-
-
-        <div class="cell">
-            <img class="thumbnail" id="spinach" src="./Produce/spinach.jpg">
-            <h5>Spinach</h5>
-            <script>
-            $(document).ready(function(){
-                $("#spinach").click(function(){
-                    alert("Spinach\nQuantity:\t4\nPrice:\t\t1.49/bunch\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
-
-
-
-
-        <div class="cell">
-            <img class="thumbnail" id="potato" src="./Produce/potato.jpg">
-            <h5>Potato</h5>
-            <script>
-            $(document).ready(function(){
-                $("#potato").click(function(){
-                    alert("Potato\nQuantity:\t5\nPrice:\t\t0.25/lb\nCategory:\tVegetable");
-                });
-            });
-        </script>
-        </div>
-
-      </div>
-      <hr>
-    </article>
+                </div>
+            </div>
+            <hr>
+        </article>
+        <!--<div>
+            <table style="width:100%" id="ex-table">
+              <tr id="tr">
+                <th>Name</th>
+                <th>Category</th> 
+                <th>Price</th>
+                <th>Measurement</th>
+                <th>Quantity</th>
+            </table> 
+        </div>-->
     </div>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCZBNpW_n9VloeFZ6wDkoSCMrY5qtcMpwA",
+        authDomain: "inventory-35171.firebaseapp.com",
+        databaseURL: "https://inventory-35171.firebaseio.com",
+        projectId: "inventory-35171",
+        storageBucket: "inventory-35171.appspot.com",
+        messagingSenderId: "524130707189"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script>
+        var database = firebase.database();
+        database.ref("produce/").once('value', function(snapshot){
+            if(snapshot.exists()){
+                var content = '';
+                snapshot.forEach(function(data){
+                    var val = data.val();
+                    content +='<tr>';
+                    content += '<td>' + val.name + '</td>';
+                    content += '<td>' + val.category + '</td>';
+                    content += '<td>' + val.price + '</td>';
+                    content += '<td>' + val.measurement + '</td>';
+                    content += '<td>' + val.quantity + '</td>';
+                    content += '</tr>';
+                    console.log("name: " + val.name);
+                    console.log("category: " + val.name);
+                    console.log("price: " + val.name);
+                    console.log("measurement: " + val.name);
+                    console.log("quantity: " + val.name);
+                });
+                $('#ex-table').append(content);
+            }
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
     <script>$(document).foundation();</script>
-  </body>
+</body>
 </html>

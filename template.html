@@ -268,7 +268,54 @@
             </div>
             <hr>
         </article>
+        <!--<div>
+            <table style="width:100%" id="ex-table">
+              <tr id="tr">
+                <th>Name</th>
+                <th>Category</th> 
+                <th>Price</th>
+                <th>Measurement</th>
+                <th>Quantity</th>
+            </table> 
+        </div>-->
     </div>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCZBNpW_n9VloeFZ6wDkoSCMrY5qtcMpwA",
+        authDomain: "inventory-35171.firebaseapp.com",
+        databaseURL: "https://inventory-35171.firebaseio.com",
+        projectId: "inventory-35171",
+        storageBucket: "inventory-35171.appspot.com",
+        messagingSenderId: "524130707189"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script>
+        var database = firebase.database();
+        database.ref("produce/").once('value', function(snapshot){
+            if(snapshot.exists()){
+                var content = '';
+                snapshot.forEach(function(data){
+                    var val = data.val();
+                    content +='<tr>';
+                    content += '<td>' + val.name + '</td>';
+                    content += '<td>' + val.category + '</td>';
+                    content += '<td>' + val.price + '</td>';
+                    content += '<td>' + val.measurement + '</td>';
+                    content += '<td>' + val.quantity + '</td>';
+                    content += '</tr>';
+                    console.log("name: " + val.name);
+                    console.log("category: " + val.name);
+                    console.log("price: " + val.name);
+                    console.log("measurement: " + val.name);
+                    console.log("quantity: " + val.name);
+                });
+                $('#ex-table').append(content);
+            }
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
