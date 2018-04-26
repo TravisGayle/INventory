@@ -97,33 +97,29 @@
                     <h5>Apple</h5>
                 </div>
 
-                <div class="modal fade" id="myModalBroccoli" role="dialog">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-
-                                <h5 class="modal-title" id="exampleModalLabel2">Broccoli</h5>
-                                <!-- <img class="thumbnail" id="apple" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModal"> -->
-
-                            </div>
-                            <div class="modal-body">
-                                <b>Quantity:    </b><p contenteditable="true">6</p>
-                                <b>Price:      </b><p contenteditable="true">0.83/bushel</p>
-                                <b>Category:   </b><p contenteditable="true">Vegetable</p>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-success">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="produce_cell">
+                    <img class="thumbnail" id="strawberry" src="./Produce/strawberry.jpg">
+                    <h5>Strawberry</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#strawberry").click(function(){
+                            alert("Strawberry\nQuantity:\t5\nPrice:\t\t5.00/lb\nCategory:\tFruit");
+                        });
+                    });
+                    </script>
                 </div>
 
                 <div class="produce_cell">
-                    <img class="thumbnail" id="broccoli" src="./Produce/broccoli.jpg" data-toggle="modal" data-target="#myModalBroccoli">
-                    <h5>Broccoli</h5>
+                    <img class="thumbnail" id="tomato" src="./Produce/tomato.jpg">
+                    <h5>Tomato</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#tomato").click(function(){
+                            alert("Tomato\nQuantity:\t7\nPrice:\t\t0.75/item\nCategory:\tFruit");
+                        });
+                    });
+                    </script>
+
                 </div>
 
                 <div class="modal fade" id="myModalCarrot" role="dialog">
@@ -155,7 +151,29 @@
                     <h5>Carrot</h5>
                 </div>
 
+                <div class="produce_cell">
+                    <img class="thumbnail" id="onion" src="./Produce/onion.jpg">
+                    <h5>Onion</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#onion").click(function(){
+                            alert("Onion\nQuantity:\t3\nPrice:\t\t0.99/item\nCategory:\tVegetable");
+                        });
+                    });
+                    </script>
+                </div>
 
+                <div class="produce_cell">
+                    <img class="thumbnail" id="orange" src="./Produce/orange.jpeg">
+                    <h5>Orange</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#orange").click(function(){
+                            alert("Orange\nQuantity:\t10\nPrice:\t\t0.60/lb\nCategory:\tFruit");
+                        });
+                    });
+                    </script>
+                </div>
 
                 <div class="produce_cell">
                     <img class="thumbnail" id="corn" src="./Produce/corn.jpg">
@@ -167,6 +185,47 @@
                         });
                     });
                     </script>
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="potato" src="./Produce/potato.jpg">
+                    <h5>Potato</h5>
+                    <script>
+                    $(document).ready(function(){
+                        $("#potato").click(function(){
+                            alert("Potato\nQuantity:\t5\nPrice:\t\t0.25/lb\nCategory:\tVegetable");
+                        });
+                    });
+                    </script>
+                </div>
+
+                <div class="modal fade" id="myModalBroccoli" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+                                <h5 class="modal-title" id="exampleModalLabel2">Broccoli</h5>
+                                <!-- <img class="thumbnail" id="apple" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModal"> -->
+
+                            </div>
+                            <div class="modal-body">
+                                <b>Quantity:    </b><p contenteditable="true">6</p>
+                                <b>Price:      </b><p contenteditable="true">0.83/bushel</p>
+                                <b>Category:   </b><p contenteditable="true">Vegetable</p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-success">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="produce_cell">
+                    <img class="thumbnail" id="broccoli" src="./Produce/broccoli.jpg" data-toggle="modal" data-target="#myModalBroccoli">
+                    <h5>Broccoli</h5>
                 </div>
 
                 <div class="produce_cell">
@@ -194,42 +253,6 @@
                 </div>
 
                 <div class="produce_cell">
-                    <img class="thumbnail" id="onion" src="./Produce/onion.jpg">
-                    <h5>Onion</h5>
-                    <script>
-                    $(document).ready(function(){
-                        $("#onion").click(function(){
-                            alert("Onion\nQuantity:\t3\nPrice:\t\t0.99/item\nCategory:\tVegetable");
-                        });
-                    });
-                    </script>
-                </div>
-
-                <div class="produce_cell">
-                    <img class="thumbnail" id="orange" src="./Produce/orange.jpeg">
-                    <h5>Orange</h5>
-                    <script>
-                    $(document).ready(function(){
-                        $("#orange").click(function(){
-                            alert("Orange\nQuantity:\t10\nPrice:\t\t0.60/lb\nCategory:\tFruit");
-                        });
-                    });
-                    </script>
-                </div>
-
-                <div class="produce_cell">
-                    <img class="thumbnail" id="potato" src="./Produce/potato.jpg">
-                    <h5>Potato</h5>
-                    <script>
-                    $(document).ready(function(){
-                        $("#potato").click(function(){
-                            alert("Potato\nQuantity:\t5\nPrice:\t\t0.25/lb\nCategory:\tVegetable");
-                        });
-                    });
-                    </script>
-                </div>
-
-                <div class="produce_cell">
                     <img class="thumbnail" id="spinach" src="./Produce/spinach.jpg">
                     <h5>Spinach</h5>
                     <script>
@@ -239,31 +262,6 @@
                         });
                     });
                     </script>
-                </div>
-
-                <div class="produce_cell">
-                    <img class="thumbnail" id="strawberry" src="./Produce/strawberry.jpg">
-                    <h5>Strawberry</h5>
-                    <script>
-                    $(document).ready(function(){
-                        $("#strawberry").click(function(){
-                            alert("Strawberry\nQuantity:\t5\nPrice:\t\t5.00/lb\nCategory:\tFruit");
-                        });
-                    });
-                    </script>
-                </div>
-
-                <div class="produce_cell">
-                    <img class="thumbnail" id="tomato" src="./Produce/tomato.jpg">
-                    <h5>Tomato</h5>
-                    <script>
-                    $(document).ready(function(){
-                        $("#tomato").click(function(){
-                            alert("Tomato\nQuantity:\t7\nPrice:\t\t0.75/item\nCategory:\tFruit");
-                        });
-                    });
-                    </script>
-
                 </div>
             </div>
             <hr>
