@@ -84,17 +84,15 @@ function goToInfoPage(){
     // changingImg(a);
 }
 
+function goToMainPage(){
+
+    window.location.href = './index.html';
+
+}
+
 //
 function changingImg(){
     document.getElementById("y").src="./Produce/goodShepherd.png";
-    // alert(value);
-    //
-    // var l = document.createElement("IMG");
-    // l.setAttribute("src", value);
-    // l.setAttribute("width", "304");
-    // l.setAttribute("height", "228");
-    // l.setAttribute("alt", value);
-    // document.body.appendChild(l);
 }
 
 function writeProduceData(name, quantity, category, price, measurement){
