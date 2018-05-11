@@ -96,3 +96,28 @@ function changingImg(){
     // l.setAttribute("alt", value);
     // document.body.appendChild(l);
 }
+
+function writeProduceData(name, quantity, category, price, measurement){
+  firebase.database().ref('produce/' + name).set({
+    name: name,
+    quantity: quantity,
+    category: category,
+    price: price,
+    measurement: measurement
+  });
+}
+
+function readProduceData(name, option){
+  database.ref("produce/"+name).once('value').then(function(snapshot)){
+    var val = data.val();
+    if (option ==== "category") {
+      return val.category;
+    }
+    else if (option ==== "price") {
+      return val.price + "/" + val.measurement;
+    }
+    else if (option ==== "quantity") {
+      return val.quantity;
+    }
+  }
+}
