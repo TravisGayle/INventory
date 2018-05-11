@@ -1,30 +1,25 @@
 
 
 var grid = new Muuri('.grid', {
-    dragEnabled: true,
-    layoutOnInit: false,
-    sortData: {
-        id: function (item, element) {
-            // console.log(element.children[0].textContent);
-            // console.log(element.children)
-            return element.children[0].textContent;
-        }
+  dragEnabled: true,
+  layoutOnInit: false,
+  sortData: {
+    id: function (item, element) {
+        // console.log(element.children[0].textContent);
+        // console.log(element.children)
+      return element.children[0].textContent;
+    },
+    bar: function (item, element) {
+      return element.children[0].classList[1];
     }
 });
 
-// var grid2 = new Muuri('.grid', {
-//   dragEnabled: true,
-//   layoutOnInit: false,
-//   sortData: {
-//     id: function (item, element) {
-//     return element.children[0].classList[1];    }
-// }
-// });
+grid.refreshSortData();
 
 var sortAsc = document.querySelector('.sort-asc');
 var sortDesc = document.querySelector('.sort-desc');
-// var sortLabelfruit = document.querySelector('.sort-labelfruit');
-// var sortLabelveg = document.querySelector('.sort-labelveg');
+var sortLabelfruit = document.querySelector('.sort-labelfruit');
+var sortLabelveg = document.querySelector('.sort-labelveg');
 
 // Sort the items before the initial layout
 // and do the initial layout
@@ -38,15 +33,15 @@ sortDesc.addEventListener('click', function () {
     grid.sort('id:desc');
 });
 
-// grid2.sort('id', {layout: 'instant'})
-//
-// sortLabelfruit.addEventListener('click', function () {
-//   grid2.sort('id');
-// });
-//
-// sortLabelveg.addEventListener('click', function () {
-//   grid2.sort('id:desc');
-// });
+// grid.sort('id', {layout: 'instant'})
+
+sortLabelfruit.addEventListener('click', function () {
+  grid.sort('bar');
+});
+
+sortLabelveg.addEventListener('click', function () {
+  grid.sort('bar:desc');
+});
 
 [].slice.call(document.querySelectorAll('.item'))
 .forEach(function (elem) {
@@ -64,25 +59,32 @@ function addProduce() {
     item.className = 'item';
     inner.className = 'item-content';
     // inner.innerHTML = 'Yay!'
-    var x = prompt("Enter the name of the produce you wish to add","");
+    var x = prompt("Enter the name of the produce you wish to add:","");
     var addedProduce = document.createElement('img');
     addedProduce.className = 'thumbnail';
     addedProduce.src = "./Produce/" + x + ".jpg"
 
     item.appendChild(addedProduce);
     grid.add(item);
+
+  }
+
+function removeProduce(){
+    var removedItem = prompt("Enter the name of the produce you wish to remove:","");
+    grid.remove(removedItem, {removeElements: true});
 }
 
-function goToInfoPage(clickedID){
+function goToInfoPage(){
    // alert(clickedID);
-   var a = "./Produce/" + clickedID + ".jpg";
+   // var a = "./Produce/" + clickedID + ".jpg";
    // alert(a);
     window.location.href = './produce.html';
     // changingImg(a);
 }
 
-function changingImg(value){
-    document.getElementById("y").src="./Produce/apple.jpg";
+//
+function changingImg(){
+    document.getElementById("y").src="./Produce/goodShepherd.png";
     // alert(value);
     //
     // var l = document.createElement("IMG");
@@ -91,4 +93,29 @@ function changingImg(value){
     // l.setAttribute("height", "228");
     // l.setAttribute("alt", value);
     // document.body.appendChild(l);
+}
+
+function writeProduceData(name, quantity, category, price, measurement){
+  firebase.database().ref('produce/' + name).set({
+    name: name,
+    quantity: quantity,
+    category: category,
+    price: price,
+    measurement: measurement
+  });
+}
+
+function readProduceData(name, option){
+  database.ref("produce/"+name).once('value').then(function(snapshot)){
+    var val = data.val();
+    if (option ==== "category") {
+      return val.category;
+    }
+    else if (option ==== "price") {
+      return val.price + "/" + val.measurement;
+    }
+    else if (option ==== "quantity") {
+      return val.quantity;
+    }
+  }
 }
