@@ -1,3 +1,10 @@
+src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"
+// Initialize Firebase
+  var config = {
+  }
+  firebase.initializeApp(config);
+
+  var database = firebase.database();
 
 
 var grid = new Muuri('.grid', {
@@ -12,6 +19,7 @@ var grid = new Muuri('.grid', {
     bar: function (item, element) {
       return element.children[0].classList[1];
     }
+}
 });
 
 grid.refreshSortData();
@@ -96,7 +104,7 @@ function changingImg(){
 }
 
 function writeProduceData(name, quantity, category, price, measurement){
-  firebase.database().ref('produce/' + name).set({
+  database().ref('produce/' + name).set({
     name: name,
     quantity: quantity,
     category: category,
@@ -106,16 +114,16 @@ function writeProduceData(name, quantity, category, price, measurement){
 }
 
 function readProduceData(name, option){
-  database.ref("produce/"+name).once('value').then(function(snapshot)){
+  database().ref("produce/"+name).once('value').then(function(snapshot){
     var val = data.val();
-    if (option ==== "category") {
+    if (option === "category") {
       return val.category;
     }
-    else if (option ==== "price") {
+    else if (option === "price") {
       return val.price + "/" + val.measurement;
     }
-    else if (option ==== "quantity") {
+    else if (option === "quantity") {
       return val.quantity;
     }
-  }
+})
 }
