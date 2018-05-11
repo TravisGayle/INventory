@@ -1,17 +1,15 @@
 
 
 var grid = new Muuri('.grid', {
-  dragEnabled: true,
-  layoutOnInit: false,
-  sortData: {
-    id: function (item, element) {
-        // console.log(element.children[0].textContent);
-        // console.log(element.children)
-      return element.children[0].textContent;
-
+    dragEnabled: true,
+    layoutOnInit: false,
+    sortData: {
+        id: function (item, element) {
+            // console.log(element.children[0].textContent);
+            // console.log(element.children)
+            return element.children[0].textContent;
+        }
     }
-}
-
 });
 
 // var grid2 = new Muuri('.grid', {
@@ -22,8 +20,6 @@ var grid = new Muuri('.grid', {
 //     return element.children[0].classList[1];    }
 // }
 // });
-
-
 
 var sortAsc = document.querySelector('.sort-asc');
 var sortDesc = document.querySelector('.sort-desc');
@@ -36,10 +32,10 @@ grid.sort('id', {layout: 'instant'})
 
 // Bind the button event listeners
 sortAsc.addEventListener('click', function () {
-  grid.sort('id');
+    grid.sort('id');
 });
 sortDesc.addEventListener('click', function () {
-  grid.sort('id:desc');
+    grid.sort('id:desc');
 });
 
 // grid2.sort('id', {layout: 'instant'})
@@ -53,13 +49,13 @@ sortDesc.addEventListener('click', function () {
 // });
 
 [].slice.call(document.querySelectorAll('.item'))
-  .forEach(function (elem) {
+.forEach(function (elem) {
     elem.addEventListener('click', function (e) {
-      e.preventDefault();
+        e.preventDefault();
     });
-  });
+});
 
-  function addProduce() {
+function addProduce() {
     // document.getElementById("plus").innerHTML = "Hello World";
     // alert("Hello\nHow are you?");
     var item = document.createElement('div');
@@ -75,9 +71,7 @@ sortDesc.addEventListener('click', function () {
 
     item.appendChild(addedProduce);
     grid.add(item);
-
-  }
-
+}
 
 function goToInfoPage(clickedID){
    // alert(clickedID);
@@ -87,7 +81,6 @@ function goToInfoPage(clickedID){
     // changingImg(a);
 }
 
-//
 function changingImg(value){
     document.getElementById("y").src="./Produce/apple.jpg";
     // alert(value);
