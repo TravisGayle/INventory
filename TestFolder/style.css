@@ -263,7 +263,7 @@ justify-content: center;
     top:9px;
 }
 
-.btn-success {
+.btn-success{
    box-shadow:0 0 0 1px #4cae4c inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #388e3c, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
    background-color:#4cae4c;
     /* padding: 15px 32px; */
@@ -273,3 +273,27 @@ justify-content: center;
 
 
 }
+.btn-success{
+   box-shadow:0 0 0 1px #4cae4c inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #388e3c, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+   background-color:#4cae4c;
+    /* padding: 15px 32px; */
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+
+
+}
+ .btn-danger {
+   box-shadow:0 0 0 1px #c61000 inset, 0 0 0 2px rgba(255,255,255,0.15) inset, 0 8px 0 0 #f45042, 0 8px 0 1px rgba(0,0,0,0.4), 0 8px 8px 1px rgba(0,0,0,0.5);
+   background-color:#c61000;
+    /* padding: 15px 32px; */
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+
+
+}
+
+
+.btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
+.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}

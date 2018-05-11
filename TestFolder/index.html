@@ -55,6 +55,8 @@
         <button type="button" class="btn-lg btn-success sort-desc">Z-A Sort</button>
         <button type="button" class="btn-lg btn-success sort-labelfruit">Fruit Sort</button>
         <button type="button" class="btn-lg btn-success sort-labelveg">Veggie Sort</button>
+        <a class="btn-lg icon-btn btn-success" href="#"><span onclick="addProduce()" id="plus" class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add</a>
+        <a class="btn-lg icon-btn btn-danger" href="#"><span onclick="removeProduce()" id="minus" class="glyphicon btn-glyphicon glyphicon-trash img-circle text-danger"></span>Delete</a>
     </div>
 </div>
 
@@ -63,21 +65,19 @@
     <div class="grid">
 
 
-      <div class="item">
 
+      <div class="item">
         <div class="item-content fruit">
             <img class="thumbnail" id="apple" onclick="goToInfoPage()" src="./Produce/apple.jpg" data-toggle="modal" data-target="#myModalApple">
                     <h5>Apple</h5>
         </div>
       </div>
 
-
       <div class="item">
         <div class="item-content vegetable">
-            <img class="thumbnail" id="broccoli" onclick="goToInfoPage()" src="./Produce/broccoli.jpg" data-toggle="modal" data-target="#myModalBroccoli">
-            <h5>Broccoli</h5>
-
-       </div>
+            <img class="thumbnail" id="kale" onclick="goToInfoPage()" src="./Produce/kale.jpg" data-toggle="modal" data-target="#myModalKale">
+            <h5>Kale</h5>
+        </div>
       </div>
 
       <div class="item">
@@ -89,8 +89,22 @@
 
       <div class="item">
         <div class="item-content vegetable">
+            <img class="thumbnail" id="garlic" onclick="goToInfoPage()" src="./Produce/garlic.jpg" data-toggle="modal" data-target="#myModalGarlic">
+            <h5>Garlic</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
             <img class="thumbnail" id="corn" onclick="goToInfoPage()" src="./Produce/corn.jpg" data-toggle="modal" data-target="#myModalCorn">
             <h5>Corn</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="kiwi" onclick="goToInfoPage()" src="./Produce/kiwi.jpg" data-toggle="modal" data-target="#myModalKiwi">
+            <h5>Kiwi</h5>
         </div>
       </div>
 
@@ -109,6 +123,13 @@
       </div>
 
       <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="pomegranate" onclick="goToInfoPage()" src="./Produce/pomegranate.jpg" data-toggle="modal" data-target="#myModalPomegranate">
+            <h5>Pomegranate</h5>
+        </div>
+      </div>
+
+      <div class="item">
         <div class="item-content vegetable">
             <img class="thumbnail" id="onion" onclick="goToInfoPage()" src="./Produce/onion.jpg" data-toggle="modal" data-target="#myModalOnion">
             <h5>Onion</h5>
@@ -117,8 +138,37 @@
 
       <div class="item">
         <div class="item-content fruit">
+            <img class="thumbnail" id="mango" onclick="goToInfoPage()" src="./Produce/mango.jpg" data-toggle="modal" data-target="#myModalMango">
+            <h5>Mango</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
             <img class="thumbnail" id="orange" onclick="goToInfoPage()" src="./Produce/orange.jpeg" data-toggle="modal" data-target="#myModalOrange">
             <h5>Orange</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="broccoli" onclick="goToInfoPage()" src="./Produce/broccoli.jpg" data-toggle="modal" data-target="#myModalBroccoli">
+            <h5>Broccoli</h5>
+
+       </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="tomato" onclick="goToInfoPage()" src="./Produce/tomato.jpg" data-toggle="modal" data-target="#myModalTomato">
+            <h5>Tomato</h5>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-content fruit">
+            <img class="thumbnail" id="blueberry" onclick="goToInfoPage()" src="./Produce/blueberry.jpg" data-toggle="modal" data-target="#myModalBlueberry">
+            <h5>Blueberry</h5>
         </div>
       </div>
 
@@ -145,16 +195,23 @@
 
       <div class="item">
         <div class="item-content fruit">
-            <img class="thumbnail" id="tomato" onclick="goToInfoPage()" src="./Produce/tomato.jpg" data-toggle="modal" data-target="#myModalTomato">
-            <h5>Tomato</h5>
+            <img class="thumbnail" id="cherry" onclick="goToInfoPage()" src="./Produce/cherry.jpeg" data-toggle="modal" data-target="#myModalCherry">
+            <h5>Cherry</h5>
         </div>
       </div>
 
       <div class="item">
+        <div class="item-content vegetable">
+            <img class="thumbnail" id="cabbage" onclick="goToInfoPage()" src="./Produce/cabbage.jpg" data-toggle="modal" data-target="#myModalCabbage">
+            <h5>Cabbage</h5>
+        </div>
+      </div>
+
+      <!-- <div class="item">
         <div class="item-content">
             <img class="thumbnail" onclick="addProduce()" id="plus" src="./Produce/plus.png" data-toggle="modal" data-target="#myModalPlus">
         </div>
-      </div>
+      </div> -->
 
     </div>
 </article>

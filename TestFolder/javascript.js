@@ -73,11 +73,10 @@ sortLabelveg.addEventListener('click', function () {
 
   }
 
-// function removeProduce(){
-//     var removedItem = prompt("Enter the name of the produce you wish to remove:","");
-//
-//     grid.remove([elemA, elemB], {removeElements: true});
-// }
+function removeProduce(){
+    var removedItem = prompt("Enter the name of the produce you wish to remove:","");
+    grid.remove(removedItem, {removeElements: true});
+}
 
 function goToInfoPage(){
    // alert(clickedID);
